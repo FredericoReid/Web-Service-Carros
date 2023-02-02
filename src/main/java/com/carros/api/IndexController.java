@@ -7,15 +7,11 @@ import org.springframework.web.bind.annotation.*;
 public class IndexController {
     @GetMapping("/get")
     public String get(){
-        return "Olá!";
+        return "Get Spring Boot!";
     }
-    @PostMapping("/post")
-    public String post(){
-        return "Olá!";
-    }
-    @PutMapping("/put")
-    public String put(){
-        return "Olá!";
+    @PostMapping("/login")
+    public String login(@RequestParam("login") String login, @RequestParam("senha") String senha){
+        return "Login " + login + ", senha: " + senha;
     }
 
 }
