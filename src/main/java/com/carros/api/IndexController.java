@@ -5,13 +5,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/")
 public class IndexController {
-    @GetMapping("/get")
+    @GetMapping()
     public String get(){
-        return "Get Spring Boot!";
+        return "API dos carros";
     }
-    @PostMapping("/login")
-    public String login(@RequestParam("login") String login, @RequestParam("senha") String senha){
-        return "Login " + login + ", senha: " + senha;
-    }
-
 }
